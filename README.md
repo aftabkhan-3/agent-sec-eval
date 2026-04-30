@@ -73,7 +73,12 @@ results/output.json
 \---
 
 
+## Agents
 
+- dummy_agent.py → local testing
+- openai_agent.py → real model testing
+
+  
 \## 📂 Project Structure
 
 

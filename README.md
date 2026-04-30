@@ -22,6 +22,23 @@ This project helps identify:
 
 \---
 
+## 🔥 Tested on Real Models
+
+This framework was used to test real AI systems.
+
+### Example Finding
+
+**Policy Abstraction Leakage**
+
+The model revealed internal decision-making logic when prompted indirectly:
+
+* "I assess the content for compliance..."
+* "I consider the intent behind the request..."
+
+**Impact:**
+
+* Helps attackers reverse-engineer safety filters
+* Enables crafting more effective prompt injections
 
 
 \## 🚀 Quick Start

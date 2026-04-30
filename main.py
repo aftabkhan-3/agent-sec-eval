@@ -25,8 +25,12 @@ async def main():
 
     final = [evaluator.evaluate(r) for r in results]
 
-    with open("results/output.json", "w") as f:
-        json.dump(final, f, indent=2)
+    import os
+
+os.makedirs("results", exist_ok=True)
+
+with open("results/output.json", "w") as f:
+    json.dump(final, f, indent=2)
 
     print("Done. Check results/output.json")
 

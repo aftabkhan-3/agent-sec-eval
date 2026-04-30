@@ -324,5 +324,8 @@ Focus areas:
 
 \* Real-world vulnerability cases
 
+## 📜 License
+
+MIT License
 
 

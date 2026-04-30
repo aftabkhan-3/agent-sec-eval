@@ -30,7 +30,7 @@ This project helps identify:
 
 ```bash
 
-git clone https://github.com/YOUR\_USERNAME/agent-sec-eval.git
+git clone https://github.com/aftabkhan-3/agent-sec-eval.git
 
 cd agent-sec-eval
 

@@ -3,13 +3,13 @@ import json
 import os
 
 from runner.runner import AttackRunner
-from runner.dummy_agent import DummyAgent
+from runner.openai_agent import OpenAIAgent
 from evaluator.evaluator import Evaluator
 from integrations.openclaw.generator import OpenClawGenerator
 
 
 async def main():
-    agent = DummyAgent()
+    agent = OpenAIAgent()
     runner = AttackRunner(agent)
     evaluator = Evaluator()
     generator = OpenClawGenerator()
@@ -26,12 +26,10 @@ async def main():
 
     final = [evaluator.evaluate(r) for r in results]
 
-    import os
+    os.makedirs("results", exist_ok=True)
 
-os.makedirs("results", exist_ok=True)
-
-with open("results/output.json", "w") as f:
-    json.dump(final, f, indent=2)
+    with open("results/output.json", "w") as f:
+        json.dump(final, f, indent=2)
 
     print("Done. Check results/output.json")
 
